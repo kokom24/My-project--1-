@@ -1,21 +1,21 @@
 using UnityEngine;
+
 [DefaultExecutionOrder(10)]
-public class Object1 : MonoBehaviour
+public class Object1_Larm : MonoBehaviour
 {
-    // mainクラスのインスタンスへの参照
-    public main mainScript;
+    // main_Larmクラスのインスタンスへの参照
+    public main_Larm mainScript;
 
     void Start()
     {
-        // mainクラスのインスタンスを取得
-        mainScript = FindObjectOfType<main>();
+        // main_Larmクラスのインスタンスを取得
+        mainScript = FindObjectOfType<main_Larm>();
 
         // mainScriptがnullでないことを確認
         if (mainScript != null)
         {
             // joint0の値を取得してコンソールに出力
-            Debug.Log("--------------Object1.cs--------------");
-
+            Debug.Log("--------------Object1_Rarm.cs--------------");
 
             // joint0の位置を取得
             Vector3 jointPosition_ob1 = mainScript.GetJoint0();
@@ -28,7 +28,7 @@ public class Object1 : MonoBehaviour
         }
         else
         {
-            Debug.LogError("main script not found.");
+            Debug.LogError("main_Larm script not found.");
         }
     }
 
@@ -46,11 +46,5 @@ public class Object1 : MonoBehaviour
             // コンソールに移動後の位置を出力
             // Debug.Log("Object1 position: " + jointPosition_ob1);          
         }
-        else
-        {
-            // Debug.LogError("main script not found.");
-        }
     }
-
-    
 }
